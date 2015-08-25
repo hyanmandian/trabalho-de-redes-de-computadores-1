@@ -1,14 +1,18 @@
+'use strict';
+
 var file = require('file');
+var cli = require('cli');
 
-var args = process.argv.slice(2);
+var fileName = cli.args(0);
 
-file.read(args[0], function(err, data) {
+file.read(fileName, function(err, data) {
 
 	if(err) {
-		console.log(err);
-
-		return;
+	    
+		return console.log(err);
+		
 	}
 
 	console.log(data);
+	
 });
