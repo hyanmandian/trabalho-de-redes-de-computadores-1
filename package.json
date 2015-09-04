@@ -1,0 +1,19 @@
+{
+  "name": "Redes-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyanmandian/trabalho-de-redes-de-computadores-1"
+  },
+  "author": "Hyan Mandian <hyanmandian@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyanmandian/trabalho-de-redes-de-computadores-1/issues"
+  },
+  "homepage": "https://github.com/hyanmandian/trabalho-de-redes-de-computadores-1"
+}
