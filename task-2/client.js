@@ -1,16 +1,16 @@
 'use strict';
 
-var socket = require('socket').createConnection(1337);
+let socket = require('socket').createConnection(1337);
 
-socket.on('connection', function(connection) {
+socket.on('connection', (connection) => {
    
    console.log('CONECTEI'); 
    
-}).on('data', function(data) {
+}).on('data', (data) => {
    
    console.log(data);
    
-}).on('disconnect', function() { 
+}).on('disconnect', () => { 
    
    console.log('DESCONECTEI');
    

@@ -1,14 +1,16 @@
 'use strict';
 
-var socket = require('socket').createServer(1337);
-var connections = [];
+let socket = require('socket').createServer(1337);
+let connections = [];
 
-socket.on('connection', function(connection) {
+socket.on('connection', (connection) => {
     
-    var count = function(i) {
+    console.log('CONECTOU');
+    
+    let count = (i) => {
         connection.write(i + '');
         
-        setTimeout(function(){
+        setTimeout(() => {
             if(socket.isConnected(connection)) {
                 count(++i);
             }
@@ -17,11 +19,11 @@ socket.on('connection', function(connection) {
     
     count(1);
     
-}).on('data', function(data) {
+}).on('data', (data) => {
     
     console.log(data);
     
-}).on('disconnect', function() {
+}).on('disconnect', () => {
     
     console.log("DESCONECTOU");    
     
