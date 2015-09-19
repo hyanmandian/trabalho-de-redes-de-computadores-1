@@ -1,7 +1,6 @@
 'use strict';
 
 let socket = require('socket').createServer(1337);
-let connections = [];
 
 socket.on('connection', (connection) => {
     

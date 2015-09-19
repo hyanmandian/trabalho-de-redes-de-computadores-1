@@ -13,3 +13,15 @@ Para executar é necessário utilizar o seguinte comando no bash: `node task-1/a
 
 2. Implementar em seu programa a criação de disponibilização de um servidor de comunicação através de uma porta, utilizando sockets. Para testar, crie outro programa que faça as vezes do cliente, conectando-se ao servidor.r utilizando Sockets, então certifique-se que a linguagem escolhida os implementa de alguma forma);
 Primeiro executamos o arquivo server.js que será nosso servidor: `node task-2/server.js` e depois executamos o arquivo client.js que será o nosso cliente: `node task-2/client.js`
+
+3.Implementar em seu programa, na rotina do servidor, as seguintes funcionalidades:
+- Perguntar ao executar em qual porta o servidor vai atender;
+- Perguntar ao executar a quantidade máxima de conexões a serem atendidas (gerenciadas por alguma estrutura de dados, com dados sobre o cliente como o IP e a porta de origem e o status da conexão, por exemplo);
+- Gerenciar múltiplas conexões - permitir que o servidor receba e atenda, de alguma forma, mais de uma conexão de forma "simultânea";
+- Validar uma ou duas mensagens enviadas pelos clientes - se são esperadas, se estão em um formato correto;
+- Retornar algum tipo de mensagem de erro caso as mensagens recebidas não estejam no formato correto.
+
+Implementar também um cliente para teste, com as seguintes funcionalidades:
+- Perguntar ao executar o ip ou nome do servidor;
+- Perguntar ao executar a porta do servidor;
+- Enviar uma mensagem simples para o servidor e aguardar alguma resposta.
