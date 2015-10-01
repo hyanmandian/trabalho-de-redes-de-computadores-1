@@ -25,3 +25,10 @@ Implementar também um cliente para teste, com as seguintes funcionalidades:
 - Perguntar ao executar o ip ou nome do servidor;
 - Perguntar ao executar a porta do servidor;
 - Enviar uma mensagem simples para o servidor e aguardar alguma resposta.
+
+4.Implementar em seu programa, na rotina do servidor, as seguintes funcionalidades:
+- Receber de qualquer um dos clientes um comando que deve ser implementado para representar a abertura de arquivo;
+- O formato do comando deve ser o seguinte "ENVIAR <caminho do arquivo\nome do arquivo>";
+- Validar se o comando recebido está correto;
+- Validar se o arquivo existe;
+- Caso exista, abrir o arquivo com a funcionalidade desenvolvida na Tarefa 1 e enviar o arquivo para o cliente que o solicitou.
