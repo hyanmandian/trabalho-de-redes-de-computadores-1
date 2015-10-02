@@ -2,17 +2,17 @@
 
 let socket = require('socket').createConnection(1337);
 let question = require('question');
-let fs = require('fs');
-var content = "";
+var buffer = [];
 
 var tryQuestion = function() {
     
-    question.prompt('', function(err, command) {
+    buffer = [];
+    
+    question.prompt('Enter command: ', function(err, command) {
         if(err) return console.log(err);
         
         socket.write(command);
         
-        question.close();
     });
     
 }
@@ -21,10 +21,16 @@ socket.on('connection', function(data) {
     
     tryQuestion();
     
-}).on('data', function(data) {
+}).on('bufferData', function(data) {
     
-    console.log(data);
-
-    tryQuestion();
+    if(data.toString() == 0) {
+        console.log(buffer.toString());
+        
+        tryQuestion();
+        
+        return ;
+    }
+    
+    buffer.push(data);
     
 });
